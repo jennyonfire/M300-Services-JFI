@@ -66,24 +66,15 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
       sudo apt-get install -y python3-pip
-      pip3 install django
+	  pip3 install django
 	  pip3 install gunicorn==19.7.1
 	  pip3 install pytz==2017.3
-      python3
-      import django
-	  python3
-	  import gunicorn
-	  python3
-	  import pytz
 	  cd
 	  cd ..
 	  cd ..
-	  cd /vagrant/mysite
-      python3 manage.py migrate
-	  cd ..
-	  cd /github
-	  python3 manage.py migrate
-	  python3 manage.py runserver 0:8000
+	  cd /vagrant/github
+	  /usr/bin/python3 manage.py migrate
+	  /usr/bin/python3 manage.py runserver 0:8000
   #   apt-get update
   #   apt-get install -y apache2
   SHELL
