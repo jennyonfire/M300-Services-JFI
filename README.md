@@ -1,2 +1,2 @@
-# M300-Services-JFI
-M300-Services Repository
+# M300-Services
+M300-Services
