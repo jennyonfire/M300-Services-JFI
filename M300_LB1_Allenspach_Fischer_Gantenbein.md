@@ -25,17 +25,20 @@ Wir haben bei dem Auftrag des eigenen Services zuerst darauf geschaut, dass wir 
 
 
 > ##### Unser Vagrantfile:
-> Test Vagrantfile
+> Das Vagrantfile finden sie in unserem jeweiligen Repository <br>
+> Dennis Allenspach: M300-Services <br>
+> Jennifer Fischer: M300-Services-JFI <br>
+> Jan Gantenbein: M300-Services-LB1
 ## Testing
 Um das Testing durchzuführen haben wir verschiedene Testcases aufgeschrieben und nach diesen Fällen die Tests druchgeführt.
 Das erwartete Ergebniss und das tatsächliche ErgebnisS wurde dann dokumentiert und festgehalten.
 
 **|Test|** <br> _Erwartete Ausgabe_ <br>  _Tatsächliches Ausgabe_
 
-**|Erstellung VM|** <br>  _ttt_ <br> _ttt_
+**|Erstellung VM|** <br>  _-Die VM soll mit "vagrant up" erstellt werden (Nach den Angaben des Vagrant Files)_ <br> _-Die VM wird erfolgreich erstellt (mit den richtigen Konfigurationen)_
 
-**|SSH Verbindung|** <br> _ttt_ <br> _ttt_
+**|SSH Verbindung|** <br> _-Es soll eine SSH Verbindung auf die neu erstelte VM möglich sein_ <br> _-Die SSH Verbindung (Port 22) konnte erfolgreich etabliert werden_
 
-**|Benutzer erstellung|** <br> _ttt_ <br> _ttt__
+**|Benutzer erstellung|** <br> _-Es soll ein Benutzer erstellt werden (Nach den eigenen Eingaben)_ <br> _-Es wird ein Benutzer erstellt, mit den eingegebenen Daten__
 
-**|Sicherheit|** <br> _ttt_ <br> _ttt__
+**|Sicherheit|** <br> _Wir haben die VM mit der Standard Firewall von Unix (UFW) aufgesetzt. Diese dann so konfiguriert dass der Port 8000, für jeden und Port 22, für unseren jeweiligen lokalen Host offen ist_

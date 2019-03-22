@@ -72,7 +72,6 @@ Vagrant.configure("2") do |config|
 	  sudo ufw deny out to any
 	  sudo ufw allow 8000/tcp
 	  sudo ufw allow from 10.0.2.2 to any port 22
-	  sudo ufw --force enable
 	  pip3 install django
 	  pip3 install gunicorn==19.7.1
 	  pip3 install pytz==2017.3
