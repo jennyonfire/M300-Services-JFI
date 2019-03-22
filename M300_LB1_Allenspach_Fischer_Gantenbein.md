@@ -21,7 +21,10 @@ Bsp. kann ein Informatiker, der mehrere VMs pro Tag aufsetzten muss sich sehr vi
 So kann er mit Git Bash in ein Verzeichnis gehen, wo sich ein Vagrant-File befindet. In diesem Verzeichnis kann er ganz einfach den command “vagrant up” ausführen und das Vagrant-File wird ausgeführt.
 In diesem Vagrant-File ist definiert von wo er sich das OS runterladen soll, welche konfigurationen er vornehemen soll und wie ist installiert wird.
 ## Eigener Service
-Wir haben bei dem Auftrag des eigenen Services zuerst darauf geschaut, dass wir das Vagrantfile überhaupt verstehen.
+Wir haben bei dem Auftrag des eigenen Services zuerst darauf geschaut, dass wir das Vagrantfile überhaupt verstehen. Unser Service beeinhaltet eine Webapplikation, welche mit Django aufgesetzt wurde. Django ist ein Framework von Python. Auf der Website kann man User erstellen und sich mit diesen Anmelden. Weiterhin gibt es einen Admin Account, welcher alle Users verwalten kann. Der Service wurde realtiv einfach aufgesetzt, und zwar wurde im Vagrantfile ein verknüpfter Ordner definiert welcher die ganze Django konfiguration beeinhaltet. Der Service ist mit Django Kentnissen sehr einfach ausbaufähig.
+
+## Nutzung:
+Um das Vagrant File effektiv zu nutzen sollte zuerst die Firewall aktiviert werden. Für das muss man die VM mit Vagrant up starten, danach mittels ssh Verbindung die Firewall aktivieren "sudo ufw enable" und anschliesslich wieder im Website Verzeichnis "vagrant/github" die Seite starten. "python3 manage.py runserver 0:8000"
 
 
 > ##### Unser Vagrantfile:
@@ -39,6 +42,8 @@ Das erwartete Ergebniss und das tatsächliche ErgebnisS wurde dann dokumentiert 
 
 **|SSH Verbindung|** <br> _-Es soll eine SSH Verbindung auf die neu erstelte VM möglich sein_ <br> _-Die SSH Verbindung (Port 22) konnte erfolgreich etabliert werden_
 
-**|Benutzer erstellung|** <br> _-Es soll ein Benutzer erstellt werden (Nach den eigenen Eingaben)_ <br> _-Es wird ein Benutzer erstellt, mit den eingegebenen Daten__
+**|Benutzer erstellung|** <br> _-Es soll ein Benutzer erstellt werden (Nach den eigenen Eingaben)_ <br> _-Es wird ein Benutzer erstellt, mit den eingegebenen Daten_
+
+**|Admin Account|** <br> _-Der Benutzer Admin kann über die Website /admin user erstellen und löschen_ <br> _-Benutzer können beliebig erstellt und gelöscht werden_
 
 **|Sicherheit|** <br> _Wir haben die VM mit der Standard Firewall von Unix (UFW) aufgesetzt. Diese dann so konfiguriert dass der Port 8000, für jeden und Port 22, für unseren jeweiligen lokalen Host offen ist_
