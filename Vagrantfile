@@ -80,7 +80,7 @@ Vagrant.configure("2") do |config|
 	  cd ..
 	  cd /vagrant/github
 	  /usr/bin/python3 manage.py migrate
-	  /usr/bin/python3 manage.py runserver 0:8000
+  #   /usr/bin/python3 manage.py runserver 0:8000
   #   apt-get update
   #   apt-get install -y apache2
   SHELL
