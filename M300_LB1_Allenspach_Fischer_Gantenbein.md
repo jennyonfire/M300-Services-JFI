@@ -1,4 +1,4 @@
-# M300 - Dokumentation von Dennis Allenspach, Jenifer Fischer &amp; Jan Gantenbein
+# M300 - Dokumentation von Dennis Allenspach, Jennifer Fischer &amp; Jan Gantenbein
 Im Modul 300 wurde uns die Arbeit mit Containers und Virtuellen Maschienen näher gebracht.
 ## Auftrag
 Unser Auftrag war es, verschiedene Services via Vagrant und GitHub zu realisieren. Mit Vagrant kann man mit einem Vagrant-File eine VM erstellen ohne irgendwelche        konfigurationen zu machen. Alles befindet sich in diesem File. IaC
