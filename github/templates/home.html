@@ -7,7 +7,7 @@
   Hi {{ user.username }}!
   <p><a href="{% url 'logout' %}">logout</a></p>
   <ul>
-    <li>Test</li>
+    <li>{{ user.username }}!</li>
 	<li>Test2</li> 
   </ul>
 {% else %}
